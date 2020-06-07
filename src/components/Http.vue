@@ -2,19 +2,33 @@
 
   <section class="src-components-http">
     <div class="jumbotron mt-3">
-      <div class="media alert alert-info mt-4" v-for="(usuario, index) in this.$store.state.contactos" :key="index">
-        <div class="media-body ml-3">
-          <h4><u>Usuario {{ index  + 1}} - ID: {{ usuario.id }} - creado: {{ usuario.createdAt }}</u></h4>
-          <br>
-          <p>Nombre: <b>{{ usuario.nombre | pasarAminuscula | pasarMayus}}</b></p>
-          <p>apellido: <b>{{ usuario.apellido | pasarAminuscula | pasarMayus}}</b></p>
-          <p>edad: {{ usuario.edad }}</p>
-          <p>direccion: <i>{{ usuario.direccion }}</i></p>
-          <p>email: <i><u>{{ usuario.email }}</u></i></p>
-          <p>telefono: <i><u>{{ usuario.telefono }}</u></i></p>
-          <button class="btn btn-danger m-3" @click="deleteUsuario(usuario.id)">DELETE</button>
-        </div>
-      </div>
+     <table class="table">
+        <thead>
+          <tr>
+            <th class="text-white">ID</th>
+            <th class="text-white">Nombre</th>
+            <th class="text-white">Apellido</th>
+            <th class="text-white">Edad</th>
+            <th class="text-white">Dirección</th>
+            <th class="text-white">Telefono</th>
+            <th class="text-white">Correo Electrónico</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(usuario, index) in this.$store.state.contactos" :key="index">
+            <td class="text-white" scope="row">{{ usuario.id }}</td>
+            <td class="text-white">{{usuario.nombre |pasarAminuscula |pasarMayus }}</td>
+            <td class="text-white">{{usuario.apellido |pasarAminuscula |pasarMayus}}</td>
+            <td class="text-white">{{usuario.edad}}</td>
+            <td class="text-white">{{usuario.direccion}}</td>
+            <td class="text-white">{{usuario.telefono}}</td>
+            <td class="text-white">{{usuario.email}}</td>
+            <td class="text-white"> <button class="btn btn-danger" @click="deleteUsuario(usuario.id)">X</button> </td>
+          </tr>
+        </tbody>
+
+      </table> 
     </div>
   </section>
 

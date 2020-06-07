@@ -1,6 +1,6 @@
 <template>
   <section class="src-components-navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <router-link to="/">
         <!-- <a class="navbar-brand" href="#">Inicio {{ contador }}</a> -->
         <!-- <a class="navbar-brand" href="#">Inicio {{ $store.state.contador }}</a> -->
