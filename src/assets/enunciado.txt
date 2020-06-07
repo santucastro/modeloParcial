@@ -1,0 +1,11 @@
+Proyecto ejemplo
+Realizar un proyecto web frontend con Vue CLI que permita ingresar datos
+de contacto a través de un formulario y que estos sean enviados a un repositorio
+en la nube (mockapi.io) Los datos de contacto serán: nombre, apellido, edad, dirección, email, teléfono
+Validar cada uno de estos campos con carteles personalizados.
+El proyecto tendrá dos vistas ruteadas, la del formulario de ingreso y una vista que permita
+visualizar toda la información almacenada en el backend en forma de tabla.
+Esta información al ser solicitada, tendrá que ser almacenada en Vuex, y desde ahí consumirla.
+Representar todos los nombres y apellidos con la primera letra en mayúscula (diseñar el filtro de vista
+correspondiente).
+Subir el proyecto a Github.
